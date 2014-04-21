@@ -181,10 +181,12 @@
   <ItemGroup>
     <Content Include="app\services\http.js" />
     <Content Include="app\main.js" />
+    <Content Include="app\viewmodels\about\index.js" />
     <Content Include="app\viewmodels\contributors\index.js" />
     <Content Include="app\viewmodels\projects\detail.js" />
     <Content Include="app\viewmodels\projects\index.js" />
     <Content Include="app\viewmodels\shell.js" />
+    <Content Include="app\views\about\index.html" />
     <Content Include="app\views\contributors\index.html" />
     <Content Include="app\views\footer.html" />
     <Content Include="app\views\projects\detail.html" />
@@ -307,6 +309,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
