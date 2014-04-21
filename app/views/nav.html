@@ -1,0 +1,25 @@
+﻿<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    
+    <div class="navbar-inner">
+        <h1> <img src="/content/images/logo.png" height="50" /> Project finder</h1>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav" data-bind="foreach: router.navigationModel">
+            <li>
+                <a data-bind="attr: { href: hash }, css: {active: isActive}, text: title">
+
+                </a>
+            </li>
+        </ul>
+        <div class="navigating" data-bind="visible: router.isNavigating"></div>
+    </div>
+</nav>

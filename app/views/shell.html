@@ -1,0 +1,21 @@
+﻿<div id="appContainer">
+    
+    <header data-bind="compose: {view: 'nav'}">
+        
+    </header>
+    
+    <section id="main" class="container">
+        
+        <div data-bind="compose: {  transition: 'entrance',
+                                    model: router.activeItem,
+                                    cacheViews: false,
+                                    attached: router.attached,
+                                    compositionComplete: router.compositionComplete}">
+        </div>
+
+    </section>
+    
+    <footer data-bind="compose: {view: 'footer'}">
+        
+    </footer>
+</div>
