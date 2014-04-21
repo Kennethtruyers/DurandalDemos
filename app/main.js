@@ -10,7 +10,6 @@
         'lodash': '/lib/lodash',
         'moment': '/lib/moment',
         'toastr': '/lib/toastr'
-
     }
 });
 

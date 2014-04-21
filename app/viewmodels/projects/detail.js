@@ -1,5 +1,5 @@
-﻿define(['services/http'],
-    function (http) {
+﻿define(['services/http', 'toastr'],
+    function (http, toastr) {
 
         var self = {};
 
@@ -16,7 +16,10 @@
         self.editing = false;
 
         self.save = function () {
-            http.put("projects/" + self.project.Id, self.project);
+            http.put("projects/" + self.project.Id, self.project)
+                .done(function() {
+                    toastr.success("Succesfully saved " + self.project.Name);
+                });
         };
 
         self.edit = function () {
