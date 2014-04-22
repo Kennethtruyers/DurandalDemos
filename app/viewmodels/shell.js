@@ -13,6 +13,7 @@
                     { route: '',                title: 'Projects',          moduleId: 'projects/index',     nav: true },
                     { route: 'contributors',    title: 'Contributors',      moduleId: 'contributors/index', nav: true },
                     { route: 'details/:id',     title: 'Project detail',    moduleId: 'projects/detail',    nav: false },
+                    { route: 'contributor/:id', title: 'Contributor',       moduleId: 'contributors/detail',nav: false},
                     { route: 'about',           title: 'About us',          moduleId: 'about/index',        nav: true}
                 ])
                 .buildNavigationModel();

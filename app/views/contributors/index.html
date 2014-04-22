@@ -2,7 +2,7 @@
     <h1 data-bind="text: title"></h1>
     <h3><span data-bind="text: contributors().length"></span> found</h3>
     <div data-bind="foreach: contributors">
-        <div class="project">
+        <div class="project" data-bind="click: $parent.gotoDetail">
             <div class="pull-left">
                 <img class="img-responsive" data-bind="attr: {src: Picture}" />
             </div>
