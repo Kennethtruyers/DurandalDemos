@@ -1,5 +1,5 @@
-﻿define(['services/http', 'toastr', './contribList', './emptyContrib'],
-    function (http, toastr, contribList, emptyContrib) {
+﻿define(['services/http', 'toastr', './contribList', './emptyContrib', 'plugins/dialog'],
+    function (http, toastr, contribList, emptyContrib, dialog) {
 
         var self = {};
 
@@ -38,6 +38,10 @@
         self.cancel = function () {
             self.editing = false;
             return loadItem(self.project.Id);
+        };
+
+        self.canDeactivate = function() {
+            return dialog.showMessage("Are you sure?", "Do you want to leave?", ["Yes", "No"]);
         };
 
         self.activate = function (id) {
