@@ -1,3 +1,5 @@
 ﻿<div>
-    <h1>About us</h1>
+    <h1 data-bind="text: title"></h1>
+    
+    <input type="text" data-bind="value: title, valueUpdate: 'afterkeydown'" placeholder="Enter a different title" />
 </div>
