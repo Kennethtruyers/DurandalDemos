@@ -13,6 +13,10 @@
         }
     };
 
+    self.removeProject = function(project) {
+        self.projects.remove(project);
+    };
+
     self.activate = function () {
         return http.get("projects")
                    .done(function(projects) {
