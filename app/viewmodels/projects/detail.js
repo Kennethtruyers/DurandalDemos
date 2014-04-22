@@ -1,15 +1,23 @@
-﻿define(['services/http', 'toastr'],
-    function (http, toastr) {
+﻿define(['services/http', 'toastr', './contribList', './emptyContrib'],
+    function (http, toastr, contribList, emptyContrib) {
 
         var self = {};
 
         self.project = {};
         self.contributors = [];
 
+        self.contribView = null;
+
         var loadItem = function (id) {
             return http.get("projects/" + id)
                        .done(function (proj) {
                            self.project = proj;
+
+                           if (self.project.Contributors.length > 1) {
+                               self.contribView = new contribList(self.project.Contributors);
+                           } else {
+                               self.contribView = new emptyContrib();
+                           }
                        });
         };
 

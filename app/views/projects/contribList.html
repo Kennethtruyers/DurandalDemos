@@ -1,0 +1,12 @@
+﻿<div>
+    <h3>Contributors:</h3>
+    <div data-bind="foreach: contributors">
+        <div class="project">
+            <div class="pull-left">
+                <img class="img-responsive" data-bind="attr: {src: Picture}" />
+            </div>
+            <h4 data-bind="text: FirstName + ' ' + LastName"></h4>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
